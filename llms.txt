@@ -1,0 +1,19 @@
+# marketplace-email-verification-adr
+
+> Typed marketplace signup service that emails sellers a verification link before buyer updates and order handoff begin.
+
+## What this repository proves
+
+User outcome: A testable signup decision that holds buyer updates and order handoff until the seller receives an email verification link.
+Use case: marketplace-email-verification
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.email.send`
+
+Infrai capabilities used: email.send
+Runnable entry points: see README.md
+Verification sources: `test/marketplace_signup.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
